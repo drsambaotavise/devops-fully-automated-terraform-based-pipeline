@@ -8,7 +8,7 @@ Testing teh webhook.....
     Fork GitHub Repository by using the existing repo "devops-fully-automated-terraform-based-pipeline" (https://github.com/drsambaotavise/devops-fully-automated-terraform-based-pipeline.git)     
     - Go to GitHub (github.com)
     - Login to your GitHub Account
-    - **Fork repository "devops-fully-automated-terraform-based-pipeline" (https://github.com/drsambaotavise/devops-fully-automated-terraform-based-pipeline.git) & name it "devops-fully-automated-infra"**
+    - **Fork repository "devops-fully-automated-terraform-based-pipeline" (https://github.com/drsambaotavise/devops-fully-automated-terraform-based-pipeline.git) & name it "devops-fully-automated-terraform-based-pipeline"**
     - Clone your newly created repo to your local
 
 2) ###### Jenkins
@@ -78,7 +78,7 @@ Testing teh webhook.....
 ### GitHub webhook
 
 1) #### Add jenkins webhook to github
-    - Access your repo **devops-fully-automated-infra** on github
+    - Access your repo **devops-fully-automated-terraform-based-pipeline** on github
     - Goto Settings --> Webhooks --> Click on Add webhook 
     - Payload URL: **htpp://REPLACE-JENKINS-SERVER-PUBLIC-IP:8080/github-webhook/**             (Note: The IP should be public as GitHub is outside of the AWS VPC where Jenkins server is hosted)
     - Click on Add webhook
@@ -94,7 +94,7 @@ Once both the above steps are done click on Save.
 ### Codebase setup
 
 1) #### For checking the checkov scan uncomment lines 74-78 in ec2/ec2.tf file
-    - Go back to your local, open your "devops-fully-automated" project on VSCODE
+    - Go back to your local, open your "devops-fully-automated-terraform-based-pipeline" project on VSCODE
     - Open "ec2.tf file" uncomment lines   
     - Save the changes in both files
     - Finally push changes to repo
@@ -109,7 +109,7 @@ Once both the above steps are done click on Save.
 ### Destroy the infra
 
 1) #### Once the flow is observed, lets destroy the infra with same code
-    - Go back to your local, open your "devops-fully-automated" project on VSCODE
+    - Go back to your local, open your "devops-fully-automated-terraform-based-pipeline" project on VSCODE
     - Open "Jenkinsfile" comment lines 59, 76-82 & uncomment lines 61, 84-90
     - Save the changes in both files
     - Finally push changes to repo
